@@ -1,1 +1,99 @@
 /* Add you CSS here */
+
+/* Basic reset for margins and font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  scroll-behavior: smooth; /* Makes the scroll to section smooth */
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #3366cc;
+  padding: 10px 0;
+}
+
+/* Navigation list styles */
+nav ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Navigation list items */
+nav ul li {
+  display: inline; /* Makes the list horizontal */
+  margin: 0 15px;
+}
+
+/* Navigation links */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Style for each section */
+section {
+  max-width: 600px; /* Keeps content narrow and readable */
+  margin: 30px auto; /* Centers the section */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  background: #e3f0ff;
+}
+
+/* Section headings */
+h2 {
+  color: #3366cc;
+  margin-top: 0;
+}
+
+/* Skills list style */
+.skills ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Contact section style */
+.contact {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Back to Top button styles */
+/* This makes the button always stay in the bottom-right corner */
+.back-to-top {
+  position: fixed;         /* Keep the button fixed on the screen */
+  right: 20px;             /* 20px from the right edge */
+  bottom: 20px;            /* 20px from the bottom edge */
+  background-color: #3366cc; /* Blue background */
+  color: #fff;             /* White text */
+  padding: 10px 16px;      /* Space inside the button */
+  border-radius: 5px;      /* Rounded corners */
+  text-decoration: none;   /* No underline */
+  font-size: 16px;         /* Bigger text */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Soft shadow */
+  opacity: 0.85;           /* Slightly see-through */
+  z-index: 100;            /* Make sure it stays on top */
+}
+
+/* Make the button a little brighter when hovered */
+.back-to-top:hover {
+  opacity: 1;
+  background-color: #254a99;
+}
