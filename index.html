@@ -6,6 +6,35 @@
   <link rel="stylesheet" href="style.css">
   <!-- Add Google Material Icons for skill icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Add a script for theme switching -->
+  <script>
+    // This function sets the theme on page load based on user/system preference
+    function setInitialTheme() {
+      // Check if user has a saved preference
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.body.className = savedTheme + '-theme';
+      } else {
+        // Use system preference if no saved preference
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.body.className = prefersDark ? 'dark-theme' : 'light-theme';
+      }
+    }
+
+    // This function toggles the theme and saves the preference
+    function toggleTheme() {
+      if (document.body.classList.contains('dark-theme')) {
+        document.body.className = 'light-theme';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.className = 'dark-theme';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Run the function when the page loads
+    window.onload = setInitialTheme;
+  </script>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -17,6 +46,11 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
+      <!-- Theme toggle button in the navbar -->
+      <li>
+        <!-- Button calls the toggleTheme function -->
+        <button class="theme-toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+      </li>
     </ul>
   </nav>
 

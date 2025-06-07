@@ -4,9 +4,19 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+/* Light theme styles */
+body.light-theme {
   background: #f9f9f9;
   color: #222;
-  scroll-behavior: smooth; /* Makes the scroll to section smooth */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background: #222;
+  color: #f9f9f9;
 }
 
 /* Navigation bar styles */
@@ -17,7 +27,7 @@ nav {
 
 /* Navigation list styles */
 nav ul {
-  list-style-type: none; /* Removes bullet points */
+  list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -25,7 +35,7 @@ nav ul {
 
 /* Navigation list items */
 nav ul li {
-  display: inline; /* Makes the list horizontal */
+  display: inline;
   margin: 0 15px;
 }
 
@@ -41,14 +51,37 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Theme toggle button styles */
+.theme-toggle-btn {
+  background: #fff;
+  color: #3366cc;
+  border: 1px solid #3366cc;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+body.dark-theme .theme-toggle-btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 /* Style for each section */
 section {
-  max-width: 600px; /* Keeps content narrow and readable */
-  margin: 30px auto; /* Centers the section */
+  max-width: 600px;
+  margin: 30px auto;
   padding: 20px;
   background: #fff;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body.dark-theme section {
+  background: #2d2d2d;
 }
 
 /* Hero section styles */
@@ -57,16 +90,36 @@ section {
   background: #e3f0ff;
 }
 
+body.dark-theme .hero {
+  background: #223355;
+}
+
 /* Section headings */
 h2 {
   color: #3366cc;
   margin-top: 0;
 }
 
+body.dark-theme h2 {
+  color: #99bbff;
+}
+
 /* Skills list style */
 .skills ul {
   list-style-type: square;
   padding-left: 20px;
+}
+
+/* Style for skill icons to align nicely with text */
+.skills .material-icons {
+  vertical-align: middle;
+  margin-right: 8px;
+  color: #3366cc;
+  font-size: 22px;
+}
+
+body.dark-theme .skills .material-icons {
+  color: #99bbff;
 }
 
 /* Contact section style */
@@ -76,24 +129,26 @@ h2 {
 }
 
 /* Back to Top button styles */
-/* This makes the button always stay in the bottom-right corner */
 .back-to-top {
-  position: fixed;         /* Keep the button fixed on the screen */
-  right: 20px;             /* 20px from the right edge */
-  bottom: 20px;            /* 20px from the bottom edge */
-  background-color: #3366cc; /* Blue background */
-  color: #fff;             /* White text */
-  padding: 10px 16px;      /* Space inside the button */
-  border-radius: 5px;      /* Rounded corners */
-  text-decoration: none;   /* No underline */
-  font-size: 16px;         /* Bigger text */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Soft shadow */
-  opacity: 0.85;           /* Slightly see-through */
-  z-index: 100;            /* Make sure it stays on top */
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #3366cc;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  opacity: 0.85;
+  z-index: 100;
 }
 
-/* Make the button a little brighter when hovered */
 .back-to-top:hover {
   opacity: 1;
   background-color: #254a99;
+}
+
+body.dark-theme .back-to-top {
+  background-color: #223355;
 }
